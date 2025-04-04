@@ -234,22 +234,22 @@ def show_temperature_api(request):
     data = list(resultObject.values())
     # print(type(data))
     print(data)
-
-    taiwan_tz = pytz.timezone("Asia/Taipei") #台灣時間
-    #call by referenct, 在list內有dict, 使用for in (rocord 為call by reference)
-    for record in data:
-        # print(record)
-        timestamp = record.get('timestamp')
-        # print(timestamp)
-        # print("..............")
-        if timestamp:
-            if timestamp.tzinfo is None:
-                timestamp = pytz.utc.localize(taiwan_tz) #新增時間資訊
-            #更新時間資訊
-            taiwan_time = timestamp.astimezone(taiwan_tz) #將時間轉為台灣時間
-            formatted_timestamp = taiwan_time.strftime("%Y-%m-%d %H:%M:%S") #格式化
-            record["timestamp"] = formatted_timestamp # basci-13.py if record 是字典型態則call by addrsss
-            print(record)
+#render.com 會error 
+    # taiwan_tz = pytz.timezone("Asia/Taipei") #台灣時間
+    # #call by referenct, 在list內有dict, 使用for in (rocord 為call by reference)
+    # for record in data:
+    #     # print(record)
+    #     timestamp = record.get('timestamp')
+    #     # print(timestamp)
+    #     # print("..............")
+    #     if timestamp:
+    #         if timestamp.tzinfo is None:
+    #             timestamp = pytz.utc.localize(taiwan_tz) #新增時間資訊
+    #         #更新時間資訊
+    #         taiwan_time = timestamp.astimezone(taiwan_tz) #將時間轉為台灣時間
+    #         formatted_timestamp = taiwan_time.strftime("%Y-%m-%d %H:%M:%S") #格式化
+    #         record["timestamp"] = formatted_timestamp # basci-13.py if record 是字典型態則call by addrsss
+    #         print(record)
     print(data)
 
     # return HttpResponse("hello go")

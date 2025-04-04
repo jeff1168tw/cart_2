@@ -5,7 +5,7 @@ from smtplib import SMTP, SMTPAuthenticationError, SMTPException
 from email.mime.text import MIMEText
 from django.forms.models import model_to_dict
 from django.http import HttpResponse,JsonResponse
-import pytz
+#import pytz
 
 message = ''
 cartlist = []  #購買商品串列

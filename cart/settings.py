@@ -68,7 +68,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 #20250407 for 雲端顯示圖片加入
-                'django.template.context_processors.media',
+                #'django.template.context_processors.media',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -158,8 +158,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
     
 ]
-MEDIA_URL = '/static/'
-MEDIA_ROOT=os.path.join(BASE_DIR, 'static')
+# MEDIA_URL = '/static/'
+# MEDIA_ROOT=os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

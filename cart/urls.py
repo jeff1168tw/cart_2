@@ -44,6 +44,6 @@ urlpatterns = [
     path('show_temperature2/',views.show_temperature2),
     
 ]
-
+#以下這行，本地執行需mark, 雲端執行才打開
 urlpatterns += static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
-# urlpatterns += static(settings.STATIC_URL , document_root=settings.STATICFILES_DIRS)
+

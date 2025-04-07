@@ -44,6 +44,6 @@ urlpatterns = [
     path('show_temperature2/',views.show_temperature2),
     
 ]
-#以下這行，本地執行需mark, 雲端執行才打開
+#以下這行，本地執行需mark, 雲端執行才打開,否則雲端會看不到圖片
 urlpatterns += static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
 

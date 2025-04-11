@@ -73,18 +73,22 @@
     {% block script %}{% endblock %} 
 </head>
 <body>
+<div class="container">
+<div class="row">
+<div class="col-12 col-sm-6 col-md-4">
     <div id="warp">
       <div id="header">
         <div class="logo"></div>
       </div>
       <div id="content"> 
         {% comment %} <img src="{% static "images/cartTitle2.png" %}" width="920" height="29" /> {% endcomment %}
-
         
-          <h3>公仔購物網</h3>
+        
+          <h3><p class="text-warning bg-dark text-center">公仔購物網</p></h3>
+          
 
         <div id="sidediv">
-          <div class="sidemenu">公仔中心0908-080080</div>
+          <div class="sidemenu">公仔中心 0800-080080</div>
           <ul>
             <li><a href="/cart/">購物車</a></li>
             <li><a href="/cartordercheck/">查詢訂單</a></li>
@@ -142,6 +146,10 @@
       </div>
 
       <div id="footer"></div>
-    </div>
+    </div> {% comment %}end div warp {% endcomment %}
+</div>
+</div>
+</div>
+    
 </body>
 </html>
